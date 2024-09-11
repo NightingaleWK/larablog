@@ -8,11 +8,21 @@ class TodoList extends Component
 {
     public $todo = '';
 
-    public $todos = [
-        'Learn Livewire',
-        'Learn Laravel',
-        'Learn Vue',
-    ];
+    public $todos = [];
+
+    public function mount()
+    {
+        $this->todos = [
+            'Learn Livewire',
+            'Learn Laravel',
+            'Learn Vue',
+        ];
+    }
+
+    public function updated($property, $value)
+    {
+        $this->$property = strtoupper($value);
+    }
 
     public function add()
     {

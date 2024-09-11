@@ -1,7 +1,7 @@
 <div>
     <form wire:submit='add'>
-        <input type="text" wire:model.live='todo'>
-        <span>current todo: {{ $todo }}</span>
+        <input type="text" wire:model='todo'>
+
         <button type="submit">Add</button>
     </form>
 
